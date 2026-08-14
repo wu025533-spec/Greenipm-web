@@ -1,12 +1,13 @@
 <!DOCTYPE html>
-<html lang="zh-Hans">
+<html lang="zh-HK">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>AI研发 | GreenIPM HK</title>
+    <title data-i18n="aiPage.meta.title">AI研發 | GreenIPM HK</title>
     <meta
       name="description"
-      content="GreenIPM HK 正在研发 AI 虫害识别与智能监测相关能力，持续关注图像识别、虫害数据分析与智能监测技术，并将逐步应用于识别、趋势判断与数据化管理。"
+      content="GreenIPM HK 正在研發 AI 蟲害識別與智能監測相關能力，持續關注圖像識別、蟲害數據分析與智能監測技術，並將逐步應用於識別、趨勢判斷與數據化管理。"
+      data-i18n-content="aiPage.meta.description"
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -43,39 +44,47 @@
     </script>
     <link rel="stylesheet" href="./styles.css" />
   </head>
-  <body class="bg-[#f6f6f2] font-[Inter] text-[#1b231d] antialiased">
+  <body class="bg-[#f6f6f2] font-[Inter] text-[#1b231d] antialiased" data-page="ai-rd">
     <header class="sticky top-0 z-50 border-b border-black/5 bg-white/95 backdrop-blur">
       <div class="mx-auto flex max-w-layout items-center justify-between px-4 py-4 lg:px-6">
-        <a class="flex items-center" href="./index.html#home" aria-label="GreenIPM HK Home">
+        <a class="flex items-center" href="./index.html#home" data-i18n-aria-label="ui.homeAria" aria-label="GreenIPM HK 首頁">
           <div>
             <p class="text-lg font-extrabold tracking-tight text-brand-600">GreenIPM HK</p>
           </div>
         </a>
 
-        <nav class="hidden items-center gap-7 text-[13px] font-medium text-[#4c534c] lg:flex" aria-label="Primary navigation">
-          <a class="nav-link" href="./index.html#home">Home</a>
-          <a class="nav-link" href="./index.html#about">About Us</a>
-          <a class="nav-link text-[#1b231d]" href="./ai-rd.html">AI R&amp;D</a>
-          <a class="nav-link" href="./index.html#green-control">Green Pest Control</a>
-          <a class="nav-link" href="./index.html#esg">ESG and Sustainable Development</a>
-          <a class="nav-link" href="./index.html#contact">Contact Us</a>
+        <nav
+          class="hidden items-center gap-7 text-[13px] font-medium text-[#4c534c] lg:flex"
+          data-i18n-aria-label="ui.primaryNavigation"
+          aria-label="主要導覽"
+        >
+          <a class="nav-link" href="./index.html#home" data-i18n="nav.home">首頁</a>
+          <a class="nav-link" href="./index.html#about" data-i18n="nav.about">關於我們</a>
+          <a class="nav-link text-[#1b231d]" href="./ai-rd.html" data-i18n="nav.ai">AI研發</a>
+          <a class="nav-link" href="./index.html#green-control" data-i18n="nav.green">綠色防控</a>
+          <a class="nav-link" href="./index.html#esg" data-i18n="nav.esg">ESG可持續發展</a>
+          <a class="nav-link" href="./index.html#contact" data-i18n="nav.contact">聯繫我們</a>
         </nav>
 
         <div class="flex items-center gap-3">
-          <button
-            class="hidden rounded-none border border-brand-500/30 px-3 py-1 text-[11px] font-semibold text-brand-600 lg:inline-flex"
-            type="button"
+          <div
+            class="language-switch hidden items-center gap-1 rounded-full border border-brand-500/25 bg-white/80 p-1 lg:inline-flex"
+            data-i18n-aria-label="ui.languageSwitcher"
+            aria-label="切換語言"
+            role="group"
           >
-            EN / 繁
-          </button>
+            <button class="lang-option" type="button" data-lang-option="en" aria-pressed="false">EN</button>
+            <button class="lang-option" type="button" data-lang-option="zh-HK" aria-pressed="true">繁</button>
+          </div>
           <button
             class="menu-toggle inline-flex h-11 w-11 items-center justify-center rounded-full border border-black/10 text-brand-700 lg:hidden"
             type="button"
             aria-expanded="false"
             aria-controls="mobile-menu"
-            aria-label="Open menu"
+            data-i18n-aria-label="ui.openMenu"
+            aria-label="開啟選單"
           >
-            <span class="sr-only">Open menu</span>
+            <span class="sr-only" data-i18n="ui.openMenu">開啟選單</span>
             <svg class="menu-open h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
               <path stroke-linecap="round" d="M4 7h16M4 12h16M4 17h16" />
             </svg>
@@ -88,18 +97,21 @@
 
       <div class="mobile-menu hidden border-t border-black/5 bg-white lg:hidden" id="mobile-menu">
         <div class="mx-auto flex max-w-layout flex-col gap-4 px-4 py-5 text-sm font-medium text-[#4c534c]">
-          <a class="mobile-link" href="./index.html#home">Home</a>
-          <a class="mobile-link" href="./index.html#about">About Us</a>
-          <a class="mobile-link text-[#1b231d]" href="./ai-rd.html">AI R&amp;D</a>
-          <a class="mobile-link" href="./index.html#green-control">Green Pest Control</a>
-          <a class="mobile-link" href="./index.html#esg">ESG and Sustainable Development</a>
-          <a class="mobile-link" href="./index.html#contact">Contact Us</a>
-          <button
-            class="mt-2 inline-flex w-fit rounded-none border border-brand-500/30 px-3 py-1 text-[11px] font-semibold text-brand-600"
-            type="button"
+          <a class="mobile-link" href="./index.html#home" data-i18n="nav.home">首頁</a>
+          <a class="mobile-link" href="./index.html#about" data-i18n="nav.about">關於我們</a>
+          <a class="mobile-link text-[#1b231d]" href="./ai-rd.html" data-i18n="nav.ai">AI研發</a>
+          <a class="mobile-link" href="./index.html#green-control" data-i18n="nav.green">綠色防控</a>
+          <a class="mobile-link" href="./index.html#esg" data-i18n="nav.esg">ESG可持續發展</a>
+          <a class="mobile-link" href="./index.html#contact" data-i18n="nav.contact">聯繫我們</a>
+          <div
+            class="language-switch mt-2 inline-flex w-fit items-center gap-1 rounded-full border border-brand-500/25 bg-white/80 p-1"
+            data-i18n-aria-label="ui.languageSwitcher"
+            aria-label="切換語言"
+            role="group"
           >
-            EN / 繁
-          </button>
+            <button class="lang-option" type="button" data-lang-option="en" aria-pressed="false">EN</button>
+            <button class="lang-option" type="button" data-lang-option="zh-HK" aria-pressed="true">繁</button>
+          </div>
         </div>
       </div>
     </header>
@@ -110,65 +122,67 @@
           <div class="mx-auto max-w-[900px]">
             <div class="mb-5 flex flex-wrap items-center gap-2">
               <span class="rounded-sm bg-white/80 px-3 py-1 text-[10px] font-bold uppercase tracking-[0.18em] text-brand-600">
-                研发中
+                <span data-i18n="aiPage.badge1">研發中</span>
               </span>
               <span class="rounded-sm bg-white/80 px-3 py-1 text-[10px] font-bold uppercase tracking-[0.18em] text-brand-600">
-                持续关注
+                <span data-i18n="aiPage.badge2">持續關注</span>
               </span>
               <span class="rounded-sm bg-white/80 px-3 py-1 text-[10px] font-bold uppercase tracking-[0.18em] text-brand-600">
-                逐步推进
+                <span data-i18n="aiPage.badge3">逐步推進</span>
               </span>
               <span class="rounded-sm bg-white/80 px-3 py-1 text-[10px] font-bold uppercase tracking-[0.18em] text-brand-600">
-                未来应用
+                <span data-i18n="aiPage.badge4">未來應用</span>
               </span>
             </div>
 
-            <h1 class="text-4xl font-extrabold leading-[1.18] tracking-[-0.04em] text-[#191d18] md:text-5xl">
-              AI虫害识别与智能监测研发中
+            <h1 class="text-4xl font-extrabold leading-[1.18] tracking-[-0.04em] text-[#191d18] md:text-5xl" data-i18n="aiPage.title">
+              AI蟲害識別與智能監測研發中
             </h1>
-            <p class="mt-5 max-w-[760px] text-[14px] leading-7 text-[#6f746f]">
-              我们正持续关注 AI 图像识别、虫害数据分析和智能监测技术的发展，未来将逐步应用于虫害识别、趋势判断和数据化管理场景。
+            <p class="mt-5 max-w-[760px] text-[14px] leading-7 text-[#6f746f]" data-i18n="aiPage.description">
+              我們正持續關注 AI 圖像識別、蟲害數據分析與智能監測技術的發展，未來將逐步應用於蟲害識別、趨勢判斷與數據化管理場景。
             </p>
 
             <div class="mt-14 grid gap-5 lg:grid-cols-3">
               <article class="rounded-md border border-[#d8ddd7] bg-white p-8 shadow-soft">
-                <h2 class="text-[18px] font-extrabold tracking-[-0.02em] text-[#232823]">AI虫害识别</h2>
-                <p class="mt-4 text-[13px] leading-7 text-[#6f746f]">
-                  持续探索通过图像识别辅助判断虫害种类，提升识别效率与管理精度。
+                <h2 class="text-[18px] font-extrabold tracking-[-0.02em] text-[#232823]" data-i18n="aiPage.card1.title">AI蟲害識別</h2>
+                <p class="mt-4 text-[13px] leading-7 text-[#6f746f]" data-i18n="aiPage.card1.body">
+                  持續探索透過圖像識別輔助判斷蟲害種類，提升識別效率與管理精度。
                 </p>
               </article>
 
               <article class="rounded-md border border-[#d8ddd7] bg-white p-8 shadow-soft">
-                <h2 class="text-[18px] font-extrabold tracking-[-0.02em] text-[#232823]">智能监测</h2>
-                <p class="mt-4 text-[13px] leading-7 text-[#6f746f]">
-                  关注虫害监测设备、数据采集和远程管理方式，为未来产品升级做准备。
+                <h2 class="text-[18px] font-extrabold tracking-[-0.02em] text-[#232823]" data-i18n="aiPage.card2.title">智能監測</h2>
+                <p class="mt-4 text-[13px] leading-7 text-[#6f746f]" data-i18n="aiPage.card2.body">
+                  關注蟲害監測設備、數據採集與遠端管理方式，為未來產品升級做好準備。
                 </p>
               </article>
 
               <article class="rounded-md border border-[#d8ddd7] bg-white p-8 shadow-soft">
-                <h2 class="text-[18px] font-extrabold tracking-[-0.02em] text-[#232823]">数据化管理</h2>
-                <p class="mt-4 text-[13px] leading-7 text-[#6f746f]">
-                  未来希望通过虫害记录、趋势分析和风险提示，帮助客户更清晰地掌握虫害变化。
+                <h2 class="text-[18px] font-extrabold tracking-[-0.02em] text-[#232823]" data-i18n="aiPage.card3.title">數據化管理</h2>
+                <p class="mt-4 text-[13px] leading-7 text-[#6f746f]" data-i18n="aiPage.card3.body">
+                  未來希望透過蟲害紀錄、趨勢分析與風險提示，協助客戶更清晰掌握蟲害變化。
                 </p>
               </article>
             </div>
 
-            <div class="mt-10 rounded-md border border-[#d8ddd7] bg-white/70 px-6 py-4 text-[12px] leading-6 text-[#6f746f]">
-              相关能力仍在研发与验证阶段，欢迎关注我们的后续进展。
+            <div class="mt-10 rounded-md border border-[#d8ddd7] bg-white/70 px-6 py-4 text-[12px] leading-6 text-[#6f746f]" data-i18n="aiPage.notice">
+              相關能力仍在研發與驗證階段，歡迎關注我們的後續進展。
             </div>
 
             <div class="mt-10 flex flex-wrap gap-3">
               <a
                 class="inline-flex items-center justify-center rounded-sm bg-brand-600 px-6 py-3 text-[12px] font-semibold text-white shadow-soft transition hover:bg-brand-700"
                 href="./index.html#contact"
+                data-i18n="aiPage.ctaContact"
               >
-                咨询合作
+                諮詢合作
               </a>
               <a
                 class="inline-flex items-center justify-center rounded-sm border border-black/10 bg-white/70 px-6 py-3 text-[12px] font-semibold text-[#2d342f] transition hover:bg-white"
                 href="./index.html#home"
+                data-i18n="aiPage.ctaHome"
               >
-                返回首页
+                返回首頁
               </a>
             </div>
           </div>
@@ -176,8 +190,8 @@
       </section>
     </main>
 
-    <footer class="bg-[#0d0f0e] py-6 text-center text-[11px] text-white/45">
-      © 2026 Green IPM Limited. All rights reserved. · Hong Kong R&amp;D.
+    <footer class="bg-[#0d0f0e] py-6 text-center text-[11px] text-white/45" data-i18n="footer.copy">
+      © 2026 Green IPM Limited. 版權所有 · 香港研發。
     </footer>
 
     <script src="./script.js"></script>
